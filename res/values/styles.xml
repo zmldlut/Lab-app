@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CMWidget" />
+    <style name="CMWidget.View" parent="@style/CMWidget" />
+    <style name="CMWidget.ImageView" parent="@style/CMWidget" />
+    <style name="CMWidget.TextView" parent="@android:style/TextAppearance">
+        <item name="android:textSize">17.0sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="CMWidget.Button" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:background">@drawable/btn_selector</item>
+    </style>
+    <style name="CMWidget.Button.Add" parent="@style/CMWidget.Button">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_add_selector</item>
+        <item name="android:layout_marginLeft">20.0dip</item>
+        <item name="android:layout_marginRight">20.0dip</item>
+        <item name="android:text">@string/operation_add</item>
+    </style>
+    <style name="CMWidget.TextView.Normal" parent="@style/CMWidget.TextView" />
+    <style name="CMWidget.GridView" parent="@style/CMWidget" />
+    <style name="CMWidget.GridView.Normal" parent="@style/CMWidget.GridView">
+        <item name="android:gravity">center</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:layout_marginLeft">15.0dip</item>
+        <item name="android:layout_marginRight">15.0dip</item>
+        <item name="android:horizontalSpacing">15.0dip</item>
+        <item name="android:verticalSpacing">8.0dip</item>
+    </style>
+    <style name="CMWidget.TextView.GridItem" parent="@style/CMWidget.TextView">
+        <item name="android:textSize">@dimen/grid_item_text_size</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="WindowTitle">
+        <item name="android:textColor">@color/trant</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:shadowColor">#00000000</item>
+        <item name="android:shadowRadius">0.0</item>
+    </style>
+    <style name="CMWidget.Listview" parent="@android:style/Widget.ListView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:layout_marginTop">@dimen/adapterview_default_margin</item>
+        <item name="android:layout_marginBottom">@dimen/adapterview_default_margin</item>
+        <item name="android:listSelector">@drawable/list_selector_holo_light</item>
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:divider">@drawable/listview_divider</item>
+        <item name="android:dividerHeight">@dimen/dividerHeight</item>
+    </style>
+    
+    
+    <style name="AppBaseTheme" parent="android:Theme.Light" />
+    <style name="AppTheme" parent="android:Theme.Black" />
+    <style name="Theme" parent="@style/AppTheme">
+        <item name="android:windowTitleSize">@dimen/action_popmenu_min_height</item>
+        <item name="android:windowTitleStyle">@style/WindowTitle</item>
+        <item name="android:windowTitleBackgroundStyle">@null</item>
+    </style>
+    <style name="Theme.Default" parent="@style/Theme">
+        <item name="android:windowBackground">@drawable/main_bg</item>
+    </style>
+    <style name="Theme.Default.Festival" parent="@style/Theme.Default">
+        <item name="android:windowBackground">@drawable/main_festival_bg</item>
+    </style>
+    <style name="Theme.Default.Skin_2" parent="@style/Theme.Default">
+        <item name="android:windowBackground">@drawable/main_skin_2_bg</item>
+    </style>
+    <style name="Theme.Default.Skin_3" parent="@style/Theme.Default">
+        <item name="android:windowBackground">@drawable/main_skin_3_bg</item>
+    </style>
+    <style name="Theme.Default.Skin_4" parent="@style/Theme.Default">
+        <item name="android:windowBackground">@drawable/main_skin_4_bg</item>
+    </style>
+    <style name="Theme.Default.Skin_5" parent="@style/Theme.Default">
+        <item name="android:windowBackground">@drawable/main_skin_5_bg</item>
+    </style>
+    <style name="Theme.Default.Skin_6" parent="@style/Theme.Default">
+        <item name="android:windowBackground">@drawable/main_skin_6_bg</item>
+    </style>
+
+    <style name="com.zml.theme.dialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" 
+        android:id="@+id/linearlayout_share" 
+        android:background="@drawable/general_ctronller_bg" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:layout_marginLeft="20.0dip" 
+        android:layout_marginRight="20.0dip" 
+        android:layout_weight="1.0">
+        <ListView android:id="@+id/listView_share" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" 
+            android:choiceMode="multipleChoice" 
+            style="@style/CMWidget.Listview" />
+    </LinearLayout>
+
+    
+    <include android:id="@+id/include_gallery" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:layout_weight="2.0" 
+        layout="@layout/general_content_gallery" />
+</LinearLayout>

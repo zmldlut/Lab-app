@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:id="@+id/linearlayout_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <GridView android:id="@+id/gridView_main"
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:listSelector="#00ffffff" 
+        android:numColumns="2" 
+        android:layout_above="@+id/ir_add_button" 
+        style="@style/CMWidget.GridView.Normal" 
+        />
+    <include android:id="@+id/empty_scene" 
+        android:visibility="gone" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginLeft="15.0dip" 
+        android:layout_marginTop="35.0dip" 
+        android:layout_marginRight="15.0dip" 
+        layout="@layout/general_emptyview" />
+    <include android:id="@+id/ir_add_button" 
+        android:visibility="gone" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="5.0dip" 
+        android:layout_marginBottom="15.0dip" 
+        android:layout_alignParentLeft="true" 
+        android:layout_alignParentBottom="true" 
+        layout="@layout/general_button_add" />
+</RelativeLayout>

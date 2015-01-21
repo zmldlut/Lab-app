@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    android:background="@drawable/grid_selector_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@+id/imageView_grid" 
+        android:background="@drawable/grid_selector_background" 
+        android:layout_width="fill_parent" 
+        android:layout_height="fill_parent" 
+        android:scaleType="fitXY" />
+    <TextView android:textColor="@color/white" 
+        android:id="@+id/textView_grid" 
+        android:paddingBottom="@dimen/grid_item_text_padding_bottom" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_alignParentBottom="true" 
+        android:layout_centerHorizontal="true" 
+        style="@style/CMWidget.TextView.GridItem" />
+</RelativeLayout>
