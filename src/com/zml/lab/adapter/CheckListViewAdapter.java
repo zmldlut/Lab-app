@@ -4,13 +4,17 @@ import java.util.List;
 import java.util.Map;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.zml.lab.ui.UiDeviceSetting;
 import com.zml.lab.view.SwitchButton;
 
 
@@ -82,7 +86,46 @@ public class CheckListViewAdapter extends BaseAdapter {
           holder.itemsTitle.setText(data1.toString());
           holder.itemsText.setText(data2.toString());
           holder.itemsCheck.setChecked((Boolean)data3);
-//          Log.e("zml", holder.itemsCheck.setChecked((Boolean)data3, false, true)+"");
+
+          final int p = position;
+          
+          holder.itemsCheck.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+              
+              @Override
+              public void onCheckedChanged(CompoundButton arg0, boolean isChecked) {
+                  switch(p) {
+                  case 0:
+                      ((UiDeviceSetting)mContext).packetType = 1006;
+                      ((UiDeviceSetting)mContext).node_id = 6;
+                      ((UiDeviceSetting)mContext).cmd = 1;
+                      break;
+                  case 1:
+                      ((UiDeviceSetting)mContext).packetType = 1005;
+                      ((UiDeviceSetting)mContext).node_id = 5;
+                      ((UiDeviceSetting)mContext).cmd = 1;
+                      break;
+                  case 2:
+                      ((UiDeviceSetting)mContext).packetType = 1003;
+                      ((UiDeviceSetting)mContext).node_id = 4;
+                      ((UiDeviceSetting)mContext).cmd = 1;
+                      break;
+                  default:
+                      break;
+                  }
+                  if(isChecked){ 
+                      ((UiDeviceSetting)mContext).cmd = 1;
+                  }else{ 
+                      ((UiDeviceSetting)mContext).cmd = 2;
+                  }
+                  
+                  if(!isChecked && p == 2) {
+                      return;
+                  }
+                  ((UiDeviceSetting)mContext).doTaskOperate();
+                  Log.e("zml", isChecked+"isChecked");
+                  Log.e("zml", p+"p");
+              }
+          });
           return convertView;
     }
 }
